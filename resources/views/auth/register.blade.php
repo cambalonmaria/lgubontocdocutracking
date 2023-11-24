@@ -10,52 +10,59 @@
         <h1 class="h3 mb-3 fw-normal">Register</h1>
        
         <div class="form-group form-floating mb-3">
-            <select name="department" id="" class="form-control mb-3">
-                <option value="Sangguniang Bayan Office">Sangguniang Bayan Office</option>
-                <option value="Municipal Planning & Development Office">Municipal Planning & Development Office</option>
-                <option value="Municipal Local Civil Registrar">Municipal Local Civil Registrar</option>
-                <option value="Municipal Budget Office">Municipal Budget Office</option>
-                <option value="Municipal Accounting Office">Municipal Accounting Office</option>
-                <option value="Municipal Treasurer Office">Municipal Treasurer Office</option>
-                <option value="Municipal Assessor's Office">Municipal Assessor's Office</option>
-                <option value="Municipal Health Office">Municipal Health Office</option>
-                <option value="Municipal Social Welfare & Development Office">Municipal Social Welfare & Development Office</option>
-                <option value="Municipal Agriculture Office">Municipal Agriculture Office</option>
-                <option value="Municipal Engineering Office">Municipal Engineering Office</option>
-            </select>
             <label for="floatingEmail">Department</label>
+            <select name="department" id="" class="form-control mb-3">
+                <option value="OFFICE OF THE MUNICIPAL MAYOR">OFFICE OF THE MUNICIPAL MAYOR</option>
+                <option value="OFFICE OF THE SANGGUNIANG BAYAN">OFFICE OF THE SANGGUNIANG BAYAN</option>
+                <option value="MUNICIPAL PLANNING AND DEVELOPMENT OFFICE">MUNICIPAL PLANNING AND DEVELOPMENT OFFICE</option>
+                <option value="MUNICIPAL ENGINEERING OFFICE">MUNICIPAL ENGINEERING OFFICE</option>
+                <option value="BIDS AWARDS COMMITTE">BIDS AWARDS COMMITTE</option>
+                <option value="MMUNICIPAL ACCOUNTING OFFICE">MUNICIPAL ACCOUNTING OFFICE</option>
+                <option value="HUMAN RESOURCE MANAGEMENT OFFICE">HUMAN RESOURCE MANAGEMENT OFFICE</option>
+                <option value="MMUNICIPAL BUDGET OFFICE">MUNICIPAL BUDGET OFFICE</option>
+                <option value="MUNICIPAL AGRICULTURE & SERVICES OFFICE">MUNICIPAL AGRICULTURE & SERVICES OFFICE</option>
+                <option value="MUNICIPAL SOCIAL WELFARE OFFICE">MUNICIPAL SOCIAL WELFARE OFFICE</option>
+                <option value="MUNICIPAL TREASURER'S OFFICE">MUNICIPAL TREASURER'S OFFICE</option>
+                <option value="MUNICIPAL ASSESSOR'S OFFICE">MUNICIPAL ASSESSOR'S OFFICE</option>
+                <option value="MUNICIPAL CIVIL REGISTRAR'S OFFICE">MUNICIPAL CIVIL REGISTRAR'S OFFICE</option>
+                <option value="MMUNICIPAL HEALTH OFFICE">MUNICIPAL HEALTH OFFICE</option>
+                <option value="GENERAL SERVICES OFFICE">GENERAL SERVICES OFFICE</option>
+                <option value="MUNICIPAL TOURISM OFFICE">MUNICIPAL TOURISM OFFICE</option>
+                <option value="MUNICIPAL DISASTER RISK REDUCTION MANAGEMENT OFFICE">MUNICIPAL DISASTER RISK REDUCTION MANAGEMENT OFFICE</option>
+                <option value="SENIOR CITIZEN OFFICE">SENIOR CITIZEN OFFICE</option>
+            </select>
         </div>
         
 
         <div class="form-group form-floating mb-3">
-            <input type="text" class="form-control" name="position" placeholder="HR" required="required" autofocus>
             <label for="floatingEmail">Position</label>
+            <input type="text" class="form-control" name="position" placeholder="Enter position" required="required" autofocus>
         </div>
 
         <div class="form-group form-floating mb-3">
+             <label for="floatingEmail">Email address</label>
             <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="name@example.com" required="required" autofocus>
-            <label for="floatingEmail">Email address</label>
             @if ($errors->has('email'))
                 <span class="text-danger text-left">{{ $errors->first('email') }}</span>
             @endif
         </div>
 
         <div class="form-group form-floating mb-3">
+             <label for="floatingName">Name</label>
             <input type="text" class="form-control" name="name" value="{{ old('username') }}" placeholder="Name" required="required" autofocus>
-            <label for="floatingName">Name</label>
             @if ($errors->has('username'))
                 <span class="text-danger text-left">{{ $errors->first('username') }}</span>
             @endif
         </div>
         
         <div class="form-group form-floating mb-3">
-            <input type="password" class="form-control" name="password" id="password" placeholder="Password" required="required">
             <label for="floatingPassword">Password</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="Password" required="required">
         </div>
 
         <div class="form-group form-floating mb-3">
-            <input type="password" class="form-control" name="password_confirmation" id="confirm-password"  placeholder="Confirm Password" required="required">
             <label for="floatingConfirmPassword">Confirm Password</label>
+            <input type="password" class="form-control" name="password_confirmation" id="confirm-password"  placeholder="Confirm Password" required="required">
             <span style="color:tomato; display:none" id="error-pass">Password does not match</span>
         </div>
         <span id="response"></span>
